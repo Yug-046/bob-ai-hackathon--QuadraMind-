@@ -1,6 +1,7 @@
-# 🚀 [Your Project Title Here]
+# 🚀 RouteGuard AI
+## Supply Chain Disruption & Fleet Utilisation Optimizer
 
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
+RouteGuard AI is an AI-powered decision-support prototype designed to help logistics and supply-chain teams respond to disruptions, optimize transportation routes, improve fleet utilization, and protect cold-chain shipments.
 
 ---
 
@@ -8,114 +9,155 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Name** | QuadraMind |
+| **Track** | AI |
+| **Team Lead** | Patel Yug Bhaveshkumar – 24ee046@charusat.edu.in |
+| **Member 2** | Nishil Niraj Patwa – 25ee043@charusat.edu.in |
+| **Member 3** | Rishit Shailendrabhai Pitroda – d26dce142@charusat.edu.in |
+| **Member 4** | Krishn Shaileshbhai Padhariya – 25ee028@charusat.edu.in |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
+Supply-chain disruptions such as severe weather, port strikes, and geopolitical events can cascade across shipments, while fleet assets may remain idle as other routes become overloaded. Cold-chain shipments are especially vulnerable because temperature excursions can cause product loss and delivery risk.
 
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+Logistics teams need a centralized decision-support system that can identify affected shipments, prioritize risk, recommend safer alternatives, redeploy underutilized fleet assets, and monitor cold-chain conditions.
 
 ---
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
+RouteGuard AI is an interactive Streamlit application that combines shipment risk analysis, disruption-aware route optimization, fleet utilization analysis, cold-chain monitoring, and AI-assisted operational recommendations.
 
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+The system analyzes synthetic logistics data to identify high-risk shipments, recommend alternative routes based on disruption risk, identify underutilized fleet assets for possible redeployment, detect cold-chain temperature excursions, and provide natural-language recommendations through an IBM watsonx.ai powered Copilot.
 
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **Disruption-aware shipment risk prioritization**  
+  Identifies shipments affected by active disruptions and prioritizes them according to operational risk.
+
+- **Disruption-aware route optimization**  
+  Compares available routes using factors such as disruption risk, travel time, and estimated cost to recommend safer alternatives.
+
+- **Fleet utilization analysis**  
+  Identifies underutilized fleet assets and recommends potential shipment assignments for redeployment.
+
+- **Cold-chain monitoring**  
+  Detects temperature excursions in cold-chain shipments and classifies their severity.
+
+- **IBM watsonx.ai Copilot**  
+  Provides natural-language operational recommendations based on the logistics scenarios presented in the application.
 
 ---
 
-## 🛠️ Tech Stack
+## 🖥️ Application Modules
 
-| Category | Technologies |
-|---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+### 1. Command Dashboard
 
----
+Provides an overview of the current logistics situation, including:
 
-## 📁 Repository Structure
+- Active shipments
+- High and critical risk shipments
+- Disruption-affected shipments
+- Operational risk indicators
 
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
+### 2. Route Optimizer
 
----
+Allows users to select an origin and destination and compare available routes.
 
-## ⚡ How to Run
+The optimizer considers:
 
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
+- Route distance
+- Estimated travel time
+- Base transportation cost
+- Disruption risk
+- Overall route score
 
-```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
+The system recommends a route with a lower operational risk while considering time and cost.
 
-# 2. Install dependencies
-[your install command here]
+### 3. Fleet Optimizer
 
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
+Analyzes fleet utilization and identifies vehicles or vessels operating below the configured utilization threshold.
 
-# 4. Run the project
-[your run command here]
-```
+The module provides potential redeployment recommendations by matching underutilized assets with suitable shipments.
 
----
+### 4. Cold Chain Monitor
 
-## 🖥️ Demo
+Analyzes temperature sensor readings for cold-chain shipments.
 
-| Artifact | Link |
-|---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
+The module provides:
+
+- Temperature readings
+- Allowed temperature range
+- Temperature deviation
+- Excursion detection
+- Severity classification
+
+### 5. AI Copilot
+
+The AI Copilot uses IBM watsonx.ai to generate natural-language operational recommendations for supply-chain scenarios.
+
+A local deterministic fallback is also available when the IBM watsonx.ai connection is not configured.
 
 ---
 
-## ⚠️ Known Limitations
+## 🛠️ Technology Stack
 
-> Be honest — judges appreciate transparency over overclaiming.
+### Languages
 
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
+- Python
+
+### Frameworks & Libraries
+
+- Streamlit
+- Pandas
+- NumPy
+- Plotly
+- NetworkX
+- Requests
+
+### IBM Technologies
+
+- IBM watsonx.ai
+- IBM Bob IDE
+
+### Testing
+
+- Pytest
+
+### Data
+
+- Synthetic CSV datasets
 
 ---
 
-## 🏅 What We're Most Proud Of
+## 📁 Project Structure
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
-
----
+```text
+routeguard-ai/
+├── src/
+│   ├── app.py
+│   ├── data_loader.py
+│   ├── generate_data.py
+│   ├── data/
+│   │   ├── shipments.csv
+│   │   ├── fleet.csv
+│   │   ├── routes.csv
+│   │   ├── disruptions.csv
+│   │   ├── cold_chain.csv
+│   │   └── README.md
+│   └── services/
+│       ├── risk_engine.py
+│       ├── route_optimizer.py
+│       ├── fleet_optimizer.py
+│       ├── cold_chain.py
+│       └── ai_copilot.py
+│
+├── tests/
+│   └── test_engines.py
+│
+├── requirements.txt
+└── README.md
