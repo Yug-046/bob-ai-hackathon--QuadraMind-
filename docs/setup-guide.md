@@ -1,79 +1,38 @@
-# Setup Guide
+# RouteGuard AI - Setup Guide
 
-> **This file is read by the automated evaluation pipeline. Be precise and complete.**
+## 1. Overview
 
-## Prerequisites
+RouteGuard AI is a Python and Streamlit-based supply-chain decision-support application.
 
-Before you begin, ensure you have the following installed:
+It provides:
 
-- [ ] [e.g., Python 3.11+]
-- [ ] [e.g., Node.js 18+]
-- [ ] [e.g., Docker Desktop]
-- [ ] [e.g., An IBM Cloud account with watsonx.ai access]
+- Shipment disruption risk analysis
+- Route optimization
+- Fleet utilization analysis
+- Fleet redeployment recommendations
+- Cold-chain temperature monitoring
+- IBM watsonx.ai powered AI Copilot
 
-## Environment Variables
+The project uses synthetic CSV datasets for demonstration purposes.
 
-Copy `.env.example` to `.env` and fill in the values:
+---
 
-```bash
-cp .env.example .env
-```
+## 2. Prerequisites
 
-| Variable | Description | Required |
-|---|---|---|
-| `WATSONX_API_KEY` | Your IBM watsonx.ai API key | Yes |
-| `WATSONX_PROJECT_ID` | Your watsonx.ai project ID | Yes |
-| `DATABASE_URL` | PostgreSQL connection string | Yes |
-| `SLACK_WEBHOOK_URL` | Slack webhook for alerts | No |
+Before running the application, install:
 
-## Installation
+- Python 3.10 or newer
+- Git
+- A modern web browser
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/[your-org]/[your-repo].git
-cd [your-repo]
+The project was developed and tested using Python 3.14.
 
-# 2. Install backend dependencies
-[your command — e.g.: pip install -r requirements.txt]
+---
 
-# 3. Install frontend dependencies (if applicable)
-[your command — e.g.: cd frontend && npm install]
+## 3. Clone the Repository
 
-# 4. Set up the database (if applicable)
-[your command — e.g.: python manage.py migrate]
-```
-
-## Running the Application
+Clone the project repository using Git:
 
 ```bash
-# Start the backend
-[your command — e.g.: uvicorn app.main:app --reload]
-
-# Start the frontend (in a separate terminal, if applicable)
-[your command — e.g.: cd frontend && npm run dev]
-```
-
-The application will be available at: `http://localhost:[PORT]`
-
-## Running Tests
-
-```bash
-[your test command — e.g.: pytest tests/ -v]
-```
-
-## Quick Demo (Optional)
-
-If you have a demo script or sample data to showcase the project quickly:
-
-```bash
-[e.g.: python demo/seed_demo_data.py]
-[e.g.: open http://localhost:8000/demo]
-```
-
-## Troubleshooting
-
-| Issue | Solution |
-|---|---|
-| [e.g., `ModuleNotFoundError`] | [e.g., Run `pip install -r requirements.txt` again] |
-| [e.g., Database connection refused] | [e.g., Ensure PostgreSQL is running: `docker compose up db`] |
-| [e.g., watsonx.ai 401 error] | [e.g., Check `WATSONX_API_KEY` in your `.env` file] |
+git clone <repository-url>
+cd bob-ai-hackathon--QuadraMind-
