@@ -1,21 +1,41 @@
 # Problem Statement
 
-## Background
+## L2 Supply Chain Disruption Assistant & Fleet Utilisation Optimizer
 
-[Describe the broader context. What domain or industry does this problem belong to? What situation creates the problem?]
+Supply-chain disruptions such as severe weather, port strikes, and geopolitical events can cascade across shipments and cause delays, rerouting requirements, and increased operational costs.
 
-## The Problem
+At the same time, fleet assets may remain idle while other routes become overloaded, creating inefficient fleet utilization. Cold-chain shipments are particularly vulnerable because temperature excursions can cause product loss and delivery risk.
 
-[State the problem clearly and specifically. Avoid vague statements like "things are slow" — instead say "Operations teams spend an average of 45 minutes per incident diagnosing pipeline failures because logs are scattered across 6 different tools."]
+RouteGuard AI addresses these challenges by providing decision support for shipment risk prioritization, disruption-aware route selection, fleet redeployment, and cold-chain temperature monitoring.
 
-## Who is Affected
+## Key Challenges
 
-[Describe the specific user or persona experiencing this problem. Be concrete — not "developers" but "backend engineers managing CI/CD pipelines in enterprises with 50+ microservices."]
+### 1. Shipment Disruption
 
-## Why It Matters
+When a disruption affects a route or location, multiple shipments may be impacted. Operations teams need to quickly identify which shipments require attention and prioritize them based on risk.
 
-[What is the cost of this problem? Lost time? Revenue? Safety risk? Frustration? Quantify if possible.]
+### 2. Route Selection
 
-## Why Existing Solutions Fall Short
+The lowest-cost or shortest route may not always be the safest option during a disruption. Operations teams need alternative routes that balance disruption risk, travel time, and cost.
 
-[Briefly explain what people currently do and why it doesn't fully solve the problem. This sets up why your solution is needed.]
+### 3. Fleet Underutilization
+
+Some fleet assets may have low utilization while other shipments require additional capacity. Identifying suitable assets for redeployment can improve overall fleet efficiency.
+
+### 4. Cold-Chain Risk
+
+Temperature-sensitive shipments require monitoring throughout transportation. Temperature excursions need to be detected and classified so that high-risk shipments can receive attention before delivery.
+
+## Target Users
+
+The prototype is intended as a decision-support tool for:
+
+- Supply-chain operations teams
+- Logistics coordinators
+- Fleet managers
+- Transportation planners
+- Cold-chain operations teams
+
+## Goal
+
+The goal of RouteGuard AI is to bring multiple supply-chain operational signals into one dashboard and help users make faster, more informed decisions when disruptions affect transportation and fleet operations.
