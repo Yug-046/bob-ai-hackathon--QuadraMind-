@@ -1,41 +1,43 @@
-# Solution Overview
+# RouteGuard AI - Solution Overview
 
-## What We Built
+## 1. Solution Summary
 
-[Describe your solution in plain language. Avoid jargon — write as if explaining to a smart colleague unfamiliar with your tech stack.]
+RouteGuard AI is an interactive supply-chain decision-support application built with Python and Streamlit.
 
-## How It Works
+It brings shipment risk analysis, disruption-aware route optimization, fleet utilization analysis, cold-chain monitoring, and AI-assisted recommendations into a single operational dashboard.
 
-[Explain the core mechanism step by step. A numbered list or simple flow works well here.]
+The prototype uses synthetic logistics datasets to demonstrate how these capabilities can work together during supply-chain disruptions.
 
-1. [Step 1: e.g., "User connects their GitHub repository via OAuth"]
-2. [Step 2: e.g., "The system ingests pipeline logs and feeds them to watsonx.ai"]
-3. [Step 3: e.g., "An anomaly score is computed and displayed on the dashboard"]
-4. [Step 4: e.g., "Alerts are sent to Slack when the score exceeds a threshold"]
+---
 
-## Architecture Diagram
+## 2. How the Solution Works
 
-> See [`architecture.md`](architecture.md) for the detailed diagram.
+RouteGuard AI processes several operational datasets and presents the results through specialized modules.
 
-[Optionally include a simple ASCII or Mermaid diagram here for quick reference.]
-
-```
-[User] → [Frontend: React] → [API: FastAPI] → [watsonx.ai] → [Dashboard]
-                                    ↓
-                             [PostgreSQL DB]
-```
-
-## Key Design Decisions
-
-| Decision | Rationale |
-|---|---|
-| [e.g., Used watsonx.ai for anomaly detection] | [e.g., Pre-trained models reduced time-to-value vs. building from scratch] |
-| [Decision 2] | [Rationale 2] |
-| [Decision 3] | [Rationale 3] |
-
-## IBM Technologies Used
-
-[Explain specifically HOW you used each IBM technology — not just that you used it.]
-
-- **[IBM Tech 1, e.g., watsonx.ai]:** [How it was used — e.g., "Used the `ibm/granite-13b-instruct-v2` model via the Python SDK to classify anomaly types from log text."]
-- **[IBM Tech 2]:** [How it was used]
+```text
+Synthetic Logistics Data
+          │
+          ▼
+     Data Loading
+          │
+          ▼
+   ┌──────┴───────┐
+   │              │
+   ▼              ▼
+Risk Analysis   Disruption Analysis
+   │              │
+   └──────┬───────┘
+          │
+    ┌─────┼───────────────┐
+    │     │               │
+    ▼     ▼               ▼
+ Route   Fleet       Cold Chain
+Optimizer Optimizer   Monitoring
+    │     │               │
+    └─────┼───────────────┘
+          │
+          ▼
+      AI Copilot
+          │
+          ▼
+    IBM watsonx.ai
